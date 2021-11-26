@@ -1,0 +1,497 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.clear-fix{
+    zoom: 1;
+}
+
+.clear-fix::after{
+    content: ".";
+    clear: both;           
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/*------------------- reuseal components ----------------*/
+.group {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section{
+    padding: 80px 0;
+}
+
+.long-para {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.box {
+    padding: 1%;
+}
+
+.box p{
+    font-size: 90%;
+    line-height: 145%;
+}
+
+.big-icon {
+    font-size: 350%;
+    display: block;
+    margin-bottom: 10px;
+    color: #e67e22;
+}
+
+/*--------------------------------------------------*/
+
+header {
+    background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.hero-text-box {
+    width: 1140px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+/*---------------------------   Heading -----------------*/
+h1,h2,h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    word-spacing: 3px; 
+    letter-spacing: 1px;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 30px;
+    word-spacing: 2px;
+    font-size: 180%;
+    letter-spacing: 1px;
+}
+
+h2::after {
+    content: " ";
+    display: block;
+    width: 120px;
+    height: 2px;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: #e67e22;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+/*--------------------------------------------*/
+
+.btn:link, .btn:visited,input[type=submit] {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, color 0.2s, border 0.2s;
+    
+}
+
+.btn:active, .btn:hover {
+    background-color: #af5404;
+}
+
+.btn-full:link, .btn-full:visited {
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-full:hover, .btn-full:active {
+    border: 1px solid #af5404;
+    background-color: #af5404;
+}
+
+.btn-ghost:link, .btn-ghost:visited {
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+
+.btn-ghost:active, .btn-ghost:hover {
+    border: 1px solid #e67e22;
+    color: #fff;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link, 
+.main-nav li a:visited{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.2s;
+    padding: 8px 0;
+}
+
+.main-nav li a:hover, 
+.main-nav li a:active{
+    border-bottom: 1px solid #af5404;
+}
+
+/*---------------------------   Feature Section  -----------------*/
+
+.section-feature .long-para{
+    margin-bottom: 30px;
+}
+
+/*---------------------------   Meal Section  -----------------*/
+
+.section-meals{
+    padding: 0;
+}
+
+.meal-showcase{
+    width: 100%;
+    list-style: none;
+}
+
+.meal-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.meal-photo{
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.meal-photo img{
+    opacity: 70%;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s, scale 0.5s;
+}
+
+.meal-photo img:hover{
+    transform: scale(1.03);
+    opacity: 1;
+}
+
+/*--------------------------- How It work Section  -----------------*/
+
+.section-step{
+    background-color: #ddd9d9;
+}
+
+.step-box:first-child{
+
+    margin-top: 30px;
+    text-align: right;
+    padding-right: 3%;
+}
+
+.step-box:last-child{
+    
+    margin-top: 70px;
+    padding-left: 3%;
+}
+
+.app-screen{
+    width: 40%;
+}
+
+.works-step{
+    margin-bottom: 50px;
+}
+
+.works-step div{
+    display: inline-block;
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 5px;
+    font-size: 150%;
+    float: left;
+    margin-right: 25px;
+}
+
+.btn-app img{
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.works-step:last-of-type{
+    margin-bottom: 80px;
+}
+
+/*--------------------------- Cities Section  -----------------*/
+
+.box img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.city-feature{
+    margin-bottom: 15px;
+}
+
+.icon-small{
+    color: #e67e22;
+    display: inline-block;
+    text-align: center;
+    font-size: 120%;
+    width: 30px;
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+    margin-right: 10px;
+}
+
+.city-twitter:link,
+.city-twitter:visited{
+    text-decoration: none;
+    color:#e67e22;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+.city-twitter:hover,
+.city-twitter:active{
+    color: #000;
+    border-bottom: 1px solid #e67e22;
+}
+
+/*--------------------------- Testimonial Section  -----------------*/
+
+.section-testimonials{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(img/back-customers.jpg);
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+blockquote{
+    font-style: italic;
+    padding: 2%;
+    line-height: 145%;
+}
+
+blockquote:before { 
+    content:open-quote;
+    font-size: 400%;
+}
+
+blockquote:after { 
+    content:close-quote;
+    color: transparent;
+    height: 0;
+}
+
+cite{
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+
+cite img{
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/*--------------------------- Sign Up Section  -----------------*/
+
+.section-plan{
+    background-color: #ddd9d9;
+}
+
+.plan-box{
+    background-color: #fff;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px #e4e1e1;
+}
+
+.plan-box div{
+    padding: 15px;
+    border-bottom:1px solid #ddd9d9;
+}
+
+.plan-price{
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #e67e22;
+}
+
+.plan-price span{
+    font-size: 30%;
+    font-weight: 300;
+}
+
+.plan-price-meal{
+    font-size: 80%;
+}
+
+.plan-box ul{
+    list-style: none;
+}
+
+.plan-box ul li{
+    padding: 5px 0;
+}
+
+.plan-box div:first-child{
+    background-color: #f3f0f0;
+}
+
+.plan-box div:last-child{
+    text-align: center;
+    border: 0;
+}
+
+/*--------------------------- Form Section  -----------------*/
+
+.content-form{
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #504d4d;
+}
+
+textarea{
+    height: 100px;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+*:focus{
+    outline: none;
+}
+
+/*--------------------------- Footer Section  -----------------*/
+
+footer{
+    background-color: rgb(15, 14, 14);
+}
+
+.footer-nav{
+    list-style: none;
+    float: left;
+    margin-top: 10px;
+}
+
+.social-links{
+    list-style: none;
+    float: right;
+    margin-top: 10px;
+}
+
+.footer-nav li,
+.social-links li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child{
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited{
+    text-decoration: none;
+    border-bottom: 0;
+    color: #999696;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active,
+.social-links li a:hover,
+.social-links li a:active{
+    color: #fff;
+}
+
+.social-links li a{
+    font-size: 150%;
+}
+
+footer p{
+    text-align: center;
+    color: #888;
+    font-size: 90%;
+    margin-top: 30px;
+    padding: 50px;
+}
